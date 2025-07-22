@@ -59,7 +59,7 @@
                     <label for="item-{{ $item->id }}"
                         @class([
                             "block w-full rounded-lg shadow-sm transition-all duration-200 dark:shadow-gray-700 dark:hover:bg-gray-700/30 cursor-pointer",
-                            "bg-gray-100 dark:bg-gray-800" => !$item->in_stock,
+                            "bg-white-100 dark:bg-gray-800" => !$item->in_stock,
                             "bg-white dark:bg-gray-900" => $item->in_stock,
                         ])
                         hover:shadow-md dark:bg-gray-800 dark:border-gray-700
@@ -81,9 +81,9 @@
                             <h5 class="text-sm font-medium text-gray-900 dark:text-white min-h-[2.5rem]">
                                 {{ $item->item_name }}
                             </h5>
-                            @if (!$item->in_stock)
+                            {{-- @if (!$item->in_stock)
                                 <div class="text-red-500">Out of stock</div>
-                            @else
+                            @else --}}
 
                             <div class="mt-1 flex items-center justify-between gap-2">
                                 @if ($item->variations_count == 0)
@@ -100,7 +100,7 @@
                                 @endif
                             </div>
                         </div>
-                        @endif
+                        {{-- @endif --}}
                     </label>
                 </li>
             @empty
